@@ -1,11 +1,15 @@
-import './App.css';
-import LoginPage from './pages/login'
+import Home from './pages/home'
+import LoginPage from './pages/login';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <LoginPage />
-    </div>
+      <Router >
+          <Routes>
+            <Route path='/' element={<LoginPage />} />
+            <Route path='/logged' element={<Home />} />
+          </Routes>
+      </Router>
   );
 }
 
